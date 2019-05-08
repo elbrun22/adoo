@@ -27,7 +27,7 @@ public class Tarea {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column (name = "id")
     private int id;
-    @Column (name = "descrips")
+    @Column (name = "descrip")
     private String descripcion;
     @Column (name = "fecha")
     private String fecha;
