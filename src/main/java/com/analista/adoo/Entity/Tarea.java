@@ -33,16 +33,18 @@ public class Tarea {
     private String fecha;
     
     @ManyToOne
-    @JoinColumn(name = "id_tareas", referencedColumnName = "id")
-    private Tarea tareas;
+    @JoinColumn(name = "id_usuario", referencedColumnName = "id")
+    private Usuario usuarios;
 
-    public Tarea getTareas() {
-        return tareas;
+    public Usuario getUsuarios() {
+        return usuarios;
     }
 
-    public void setTareas(Tarea tareas) {
-        this.tareas = tareas;
+    public void setUsuarios(Usuario usuarios) {
+        this.usuarios = usuarios;
     }
+
+    
 
     public int getId() {
         return id;

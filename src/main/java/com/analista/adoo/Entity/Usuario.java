@@ -31,7 +31,7 @@ public class Usuario {
     @Column (name = "nombre")
     private String nombre;
     
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "usuario",orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "usuario")
     private List<Tarea> tarea;
 
     public void addClases(Tarea tareas) {
