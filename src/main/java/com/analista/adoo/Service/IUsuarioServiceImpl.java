@@ -5,10 +5,27 @@
  */
 package com.analista.adoo.Service;
 
+import com.analista.adoo.Dao.IUsuarioDao;
+import com.analista.adoo.Entity.Tarea;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author nahuel
  */
-public class IUsuarioServiceImpl {
+@Service
+public class IUsuarioServiceImpl implements IUsuarioService{
+
+    @Autowired
+    IUsuarioDao dao;
+    
+    @Override
+    public List<Tarea> buscarTodo() {
+        return (List<Tarea>) dao.findAll();
+    }
+    
+    
     
 }

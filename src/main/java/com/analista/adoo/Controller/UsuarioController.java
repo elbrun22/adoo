@@ -6,16 +6,23 @@
 package com.analista.adoo.Controller;
 
 import com.analista.adoo.Entity.Tarea;
+import com.analista.adoo.Service.IUsuarioService;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  *
  * @author nahuel
  */
+@Controller
 public class UsuarioController {
+    
+    @Autowired
+    IUsuarioService serv1;
     
     @GetMapping({"/tareas"})
     public String lista(Map m) throws SQLException{

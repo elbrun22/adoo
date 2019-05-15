@@ -5,10 +5,13 @@
  */
 package com.analista.adoo.Dao;
 
+import com.analista.adoo.Entity.Tarea;
+import org.springframework.data.jpa.repository.JpaRepository;
+
 /**
  *
  * @author nahuel
  */
-public interface IUsuarioDao {
+public interface IUsuarioDao extends JpaRepository<Tarea, Integer>{
     
 }
